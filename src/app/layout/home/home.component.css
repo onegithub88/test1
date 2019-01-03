@@ -1,0 +1,125 @@
+#main_wrap { 
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+#sidebar {
+    color:#fff;
+    background-color: #333;
+    min-width: 200px;
+    margin-left: -150px;
+    transition: all .3s ease-out;
+    display: table-cell;
+}
+#sidebar ul > li{
+   text-decoration: none;
+   cursor: pointer;
+   color:#ccc;
+   padding: 10px 15px;
+   display: block;
+   background-color:rgba(0, 0, 0, 0.2);
+}
+#sidebar ul > li:hover{
+    color: #fff;
+    background-color:rgba(255, 255, 255, 0.2);
+ }
+#sidebar.active {
+    margin-left: 0px;
+    transition: all .4s  ease-out;
+    display: table-cell;
+}
+
+#sidebar.active ul {
+   list-style-type: none;
+   margin:0px;
+   padding:0px;
+}
+
+#sidebar.active ul {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+} 
+
+#content {
+    display: table-cell;
+    width: 100%;
+}
+.top-menu{
+    height: 52px;
+    color:#fff;
+}
+.clr-white{
+    color:#fff;
+}
+.small-title{
+    font-size: 15px;
+    font-weight: 100;
+    color:#999;
+}
+.font-22px{
+    font-size: 22px;
+}
+.table-icon{
+    visibility: visible;
+    transition: all .5s ease-in;
+    font-size: 22px;
+}
+.hiden-icontable{
+    visibility: hidden;
+    transition: all .5s ease-in;
+    font-size: 10px;
+}
+.grafik-icon {
+    visibility: visible;
+    transition: all .5s ease-in;
+    font-size: 22px;
+}
+.hiden-icongrafik{
+    visibility: hidden;
+    transition: all .5s ease-in;
+    font-size: 10px;
+}
+.icon-show {
+    visibility: visible;
+    transition: all .5s ease-in;
+    font-size: 22px;
+}
+.hiden-icon{
+    visibility: hidden;
+    transition: all .5s ease-in;
+    font-size: 10px;
+}
+.icon-text{
+    visibility: hidden;
+    font-size: 5px;
+    transition: all .3s ease-in;
+}
+.show-icontext{
+    visibility: visible;
+    font-size: 22px;
+    font-weight: 500;
+    transition: all .3s ease-in;
+}
+.table-text{
+    visibility: hidden;
+    font-size: 5px;
+    transition: all .3s ease-in;
+}
+.show-text{
+    visibility: visible;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .3s ease-in;
+}
+.grafik-text{
+    visibility: hidden;
+    font-size: 5px;
+    transition: all .3s ease-in;
+}
+.show-grafiktext{
+    visibility: visible;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .3s ease-in;
+}

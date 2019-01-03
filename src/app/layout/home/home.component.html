@@ -1,0 +1,56 @@
+<div id="main_wrap">
+    <div id="sidebar">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="pl-2 pt-2 pb-1 top-menu bg-blue-2">
+              <div class="d-flex justify-content-between">
+                <div class="icon-text font-22px">FE-PRODUCT</div>
+                <div class="icon-show pr-3"><i class=" fa fa-home font-22px"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul>
+              <li (click)="handleGotoAddProduct()" class="d-flex justify-content-between">
+                <div class="table-text"><i class="fa fa-plus"></i>  add Product</div>
+                <div class="table-icon"><i class="fa fa-plus font-22px"></i></div>
+              </li>
+              <li (click)="handleGotoListProduct()" class="d-flex justify-content-between">
+                <div class="grafik-text"><i class="fa fa fa-database"></i>  List Product</div>
+                <div class="grafik-icon"><i class="fa fa fa-database font-22px"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div id="content">
+      <div class="row align-items-center align-items-stretch">
+        <div class="col-lg-12">
+          <div class="pl-2 pt-2 pb-1 top-menu bg-blue">
+            <button class="btn font14px" type="button" (click)="handleHideDasboard(!showSidebar)"><i class="fa fa-bars"></i></button>  
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-12 pt-3 pb-3 d-flex justify-content-center">
+          <h3 class="pt-1 blue-color">FE - PRODUCT <span class="small-title red-color"></span></h3>
+        </div>
+      </div>
+      <div class="row pad-content"> 
+        <div class="col-lg-12">
+            <router-outlet></router-outlet>
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="pl-2 pt-2 top-menu bg-blue">
+              <div class="row d-flex justify-content-center pt-1">
+                Create By OneCyber88
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>​

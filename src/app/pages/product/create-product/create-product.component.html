@@ -1,0 +1,111 @@
+<div class="row ml-4 mr-4 mb-4">
+  <div class="col-lg-12 mb-2">
+    <div class="row">
+      <div class="col-lg-12 sparator mb-4"></div>
+    </div>
+    <div class="row">
+      <form novalidate (ngSubmit)="onSubmit(user)" [formGroup]="user">
+        <label>Full name</label>
+        <input 
+          type="text"
+          name="name"
+          placeholder="your full name"
+          formControlName="name"
+        />
+        <span  class="text-danger" *ngIf="user.get('name').hasError('required') && user.get('name').touched">Nama tidak boleh kosong</span>
+        <div class="d-flex flex-column mb-2" formGroupName="account">
+          <input
+            class="mb-2"
+            type="text"
+            name="email"
+            formControlName="email"
+          />
+          <input
+            type="text"
+            name="address"
+            formControlName="address"
+          />
+        </div>
+        <button [disabled]="user.invalid" type="submit">PROSES</button>
+        <span>{{user.value | json}}</span>||
+        <span>{{user.get("name").touched | json}}</span>
+
+      </form>
+    </div>
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Kode Product</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="text" [(ngModel)]="dataProduct.kode_product" name="kode_product">
+            <display-error [errField]="'kode_product'" [errValue]="dataProduct.kode_product"></display-error>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Name Product</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="text" [(ngModel)]="dataProduct.nama_product" name="nama_product">
+            <display-error [errField]="'nama_product'" [errValue]="dataProduct.nama_product"></display-error>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Satuan</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="text" [(ngModel)]="dataProduct.satuan" name="satuan" >
+            <display-error [errField]="'satuan'" [errValue]="dataProduct.satuan"></display-error>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Jumlah</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="number" [(ngModel)]="dataProduct.jumlah" name="jumlah">
+            <display-error [errField]="'jumlah'" [errValue]="dataProduct.jumlah"></display-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Harga</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="number" [(ngModel)]="dataProduct.harga" name="harga">
+            <display-error [errField]="'harga'" [errValue]="dataProduct.harga"></display-error>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+      </div>
+    </div>
+    <div class="row mt-5 mb-4">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-danger mr-4 btn-width" (click)="handleGoBack()">Cancel</button>
+          <button class="btn btn-primary btn-width" (click)="handleSubmitProduct()">submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 sparator mb-4"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="row ml-4 mr-4 mb-4">
+  <div class="col-lg-12 mb-2">
+    <div class="row">
+      <div class="col-lg-12 sparator mb-4"></div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Kode Product</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" [disabled]="disableKodeProduct" type="text" [(ngModel)]="dataEditProduct.kode_product" name="kode_product">
+            <display-error [errField]="'kode_product'" [errValue]="dataEditProduct.kode_product"></display-error>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Name Product</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="text" [(ngModel)]="dataEditProduct.nama_product" name="nama_product">
+            <display-error [errField]="'nama_product'" [errValue]="dataEditProduct.nama_product"></display-error>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Satuan</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="text" [(ngModel)]="dataEditProduct.satuan" name="satuan" >
+            <display-error [errField]="'satuan'" [errValue]="dataEditProduct.satuan"></display-error>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Jumlah</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="number" [(ngModel)]="dataEditProduct.jumlah" name="jumlah">
+            <display-error [errField]="'jumlah'" [errValue]="dataEditProduct.jumlah"></display-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <label class="font-weight-bold">Harga</label>
+          </div>
+          <div class="col-lg-7">
+            <input class="form-control" type="number" [(ngModel)]="dataEditProduct.harga" name="harga">
+            <display-error [errField]="'harga'" [errValue]="dataEditProduct.harga"></display-error>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+      </div>
+    </div>
+    <div class="row mt-5 mb-4">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-danger mr-4 btn-width" (click)="handleGoBack()">Cancel</button>
+          <button class="btn btn-primary btn-width" (click)="handleEditProduct()">Update</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 sparator mb-4"></div>
+    </div>
+  </div>
+</div>
